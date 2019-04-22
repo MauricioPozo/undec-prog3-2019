@@ -10,47 +10,50 @@ package colmena;
  * @author Administrador
  */
 abstract class Abeja {
-    protected double jaleaPor;
-    protected double polenPor;
-    protected double mielPor;
-    protected String res;
+    protected double PorcentajeJalea;
+    protected double PorcentajePolen;
+    protected double PorcentajeMiel;
+    protected String Responsabilidad;
 
-    public Abeja(double jaleaPor, double polenPor, double mielPor, String res) {
-        this.jaleaPor = jaleaPor;
-        this.polenPor = polenPor;
-        this.mielPor = mielPor;
-        this.res=res;
+    public Abeja(double PorcentajeJalea, double PorcentajePolen, double PorcentajeMiel, String Responsabilidad) {
+        this.PorcentajeJalea = PorcentajeJalea;
+        this.PorcentajePolen = PorcentajePolen;
+        this.PorcentajeMiel = PorcentajeMiel;
+        this.Responsabilidad = Responsabilidad;
     }
 
-    public double getJaleaPor() {
-        return jaleaPor;
+    public double getPorcentajeJalea() {
+        return PorcentajeJalea;
     }
 
-    public void setJaleaPor(double jaleaPor) {
-        this.jaleaPor = jaleaPor;
+    public void setPorcentajeJalea(double PorcentajeJalea) {
+        this.PorcentajeJalea = PorcentajeJalea;
     }
 
-    public double getPolenPor() {
-        return polenPor;
+    public double getPorcentajePolen() {
+        return PorcentajePolen;
     }
 
-    public void setPolenPor(double polenPor) {
-        this.polenPor = polenPor;
+    public void setPorcentajePolen(double PorcentajePolen) {
+        this.PorcentajePolen = PorcentajePolen;
     }
 
-    public double getMielPor() {
-        return mielPor;
+    public double getPorcentajeMiel() {
+        return PorcentajeMiel;
     }
 
-    public void setMielPor(double mielPor) {
-        this.mielPor = mielPor;
-    }   
-
-    public String getRes() {
-        return res;
+    public void setPorcentajeMiel(double PorcentajeMiel) {
+        this.PorcentajeMiel = PorcentajeMiel;
     }
-    
-    public abstract void Informacion();
-    
-    public abstract void Volar();
+
+    public String getResponsabilidad() {
+        return Responsabilidad;
+    }
+
+    public void setResponsabilidad(String Responsabilidad) {
+        this.Responsabilidad = Responsabilidad;
+    }
+
+        
+ 
 }

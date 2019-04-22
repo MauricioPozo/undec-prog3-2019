@@ -9,24 +9,24 @@ package colmena;
  *
  * @Mauricio Pozo
  */
-public class AbejaReina extends Abeja{
+public class AbejaReina extends Abeja implements MostrarInfoAbeja{
 
     public AbejaReina(double jaleaPor, double polenPor, double mielPor, String res) {
         super(jaleaPor, polenPor, mielPor, "Cuidan la Colmena");    }
 
     @Override
-    public void Volar() {
+    public void vuelo() {
         System.out.println("La abeja reina vuela desde la base de la colmena hacia la cima de esta en círculos concéntricos,"
                 + "hasta ser alcanzada por un Zangano");
     }
 
     @Override
-    public void Informacion() {
+    public void mostrarInfo() {
        System.out.println("La Abeja Reina consume:"+
-               "\nUn porcentaje de jalea igual a " + jaleaPor + 
-               "\nun porcentaje de polen igual a " + polenPor + 
-               "\nun porcentaje de miel igual a " + mielPor +
-               "\ny su respansabilidad es: " + res);
+               "\nUn porcentaje de jalea igual a " + PorcentajeJalea + 
+               "\nun porcentaje de polen igual a " + PorcentajePolen + 
+               "\nun porcentaje de miel igual a " + PorcentajeMiel +
+               "\ny su respansabilidad es: " + Responsabilidad);
     }
     
 }

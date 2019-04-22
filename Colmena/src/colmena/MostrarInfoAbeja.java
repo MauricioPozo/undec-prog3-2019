@@ -7,11 +7,9 @@ package colmena;
 
 /**
  *
- * @author Administrador
+ * @author Paez
  */
-public class Principal {
-   public static void main(String[] args) {
-      AbejaObrera AR = new AbejaObrera(0.2, 0.5, 0.6,"");
-      AR.mostrarInfo();
-    }  
+public interface MostrarInfoAbeja {
+    public abstract void mostrarInfo();
+    public abstract void vuelo();
 }
