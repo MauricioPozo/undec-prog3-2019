@@ -1,14 +1,15 @@
 package ar.edu.undec;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
-class AerolineaUnitTest {
+public class AerolineaUnitTest {
 
 	@Test
-	void test() {
-		fail("Not yet implemented");
+	public void intanciarAerolinea_TodoslosAtributos_correctos() {
+		Aerolinea unaAerolinea = new Aerolinea(1,"Avianca");
+		assertEquals (1, unaAerolinea.getIdAerolinea());
+		assertEquals ("Avianca", unaAerolinea.getNombre());
 	}
-
 }

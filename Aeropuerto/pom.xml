@@ -3,7 +3,7 @@
   <groupId>Aeropuerto</groupId>
   <artifactId>ar.edu.undec</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <build>
+   <build>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>

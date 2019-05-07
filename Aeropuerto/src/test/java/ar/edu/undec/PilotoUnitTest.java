@@ -1,13 +1,13 @@
 package ar.edu.undec;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
-class PilotoUnitTest {
+public class PilotoUnitTest {
 
 	@Test
-	void test() {
+	public void test() {
 		fail("Not yet implemented");
 	}
 
