@@ -1,5 +1,4 @@
 package ar.edu.undec;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -32,6 +31,4 @@ public class Avion {
 		return asientosDelAvion;
 	}
 	
-	
-
 }
