@@ -11,7 +11,7 @@ public class PilotoUnitTest {
 	LocalDate fechaNacimientoPiloto = LocalDate.of(1994, 7, 18);
 	LocalDate otraFechaNacimientoPiloto = LocalDate.of(1995, 7, 18);
 	@Test
-	public void instanciarPiloto_TodosLosAtributos_Correctos() {
+	public void instanciarPiloto_TodosLosAtributos_Correctos()throws ExcepcionCampoIncorrecto {
 		Piloto unPiloto = new Piloto(1,"Apellido", "Nombres", "Documento", fechaNacimientoPiloto);
 		assertEquals(1, unPiloto.getIdPiloto());
 		assertEquals("Apellido", unPiloto.getApellidoPiloto());
@@ -21,7 +21,7 @@ public class PilotoUnitTest {
 	}
 	
 	@Test
-	public void instanciarPiloto_TodosLosAtributos_Incorrectos() {
+	public void instanciarPiloto_TodosLosAtributos_Incorrectos() throws ExcepcionCampoIncorrecto {
 		Piloto unPiloto = new Piloto(2,"Apellidos", "Nombre", "Documentos", fechaNacimientoPiloto);
 		assertNotEquals(1, unPiloto.getIdPiloto());
 		assertNotEquals("Apellido", unPiloto.getApellidoPiloto());
@@ -30,7 +30,7 @@ public class PilotoUnitTest {
 		assertNotEquals(otraFechaNacimientoPiloto, unPiloto.getFechaNacimientoPiloto());		
 	}
 	@Test
-	public void instanciarPiloto_todosLosAtributos_MayorDeEdad() {
+	public void instanciarPiloto_todosLosAtributos_MayorDeEdad() throws ExcepcionCampoIncorrecto{
 		LocalDate fechaHoy = LocalDate.now();
 		Piloto unPiloto = new Piloto(0, "Pozo", "Mauricio Gabriel", "38222630", fechaNacimientoPiloto);
 		Period edad = Period.between(unPiloto.getFechaNacimientoPiloto(), fechaHoy);		

@@ -1,6 +1,7 @@
 package ar.edu.undec;
 
 import java.time.LocalDate;
+import java.time.Period;
 
 public class Piloto {
 	private Integer idPiloto;
@@ -9,13 +10,24 @@ public class Piloto {
 	private String documentoPiloto;
 	private LocalDate fechaNacimiento;
 
-	public Piloto(Integer id, String apellido, String nombre, String documento, LocalDate fechaNacimiento) {
-		this.idPiloto = id;
-		this.apellidoPiloto = apellido;
-		this.nombresPiloto = nombre;
-		this.documentoPiloto = documento;
-		this.fechaNacimiento = fechaNacimiento;
+	public Piloto(Integer id, String apellido, String nombres, String documento, LocalDate fechaNacimiento) throws ExcepcionCampoIncorrecto{
+		if(documento.isEmpty()) {
+			throw new ExcepcionCampoIncorrecto("El Documento no puede estar vacío");
+		}else
+			if(Period.between(fechaNacimiento, LocalDate.now()).getYears() < 18) {
+				throw new ExcepcionCampoIncorrecto("El Piloto no puede ser menor de edad");
+			}else {
+					this.idPiloto = id;
+					this.documentoPiloto= documento;
+					this.apellidoPiloto = apellido;
+					this.nombresPiloto = nombres;
+					this.fechaNacimiento = fechaNacimiento;
+				}
 	}
+	
+	public Piloto() {	
+	}
+	
 	public int getIdPiloto() {
 		return idPiloto.intValue();
 	}

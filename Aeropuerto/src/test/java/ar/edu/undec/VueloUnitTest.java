@@ -12,7 +12,7 @@ public class VueloUnitTest {
 	
 	
 	@Test
-	public void intanciarUnVuelo_TodosLosAtributos_Correctos() {
+	public void intanciarUnVuelo_TodosLosAtributos_Correctos() throws ExcepcionCampoIncorrecto{
 		Ciudad CiudadAeropuertoSalida = new Ciudad(23, "Buenos Aires", "1011");
 		Ciudad CiudadAeropuertoArribo = new Ciudad(15, "Córdoba", "5010");
 		Aeropuerto aeropuertoDeSalida = new Aeropuerto(1,"Ezeiza",CiudadAeropuertoSalida,"aNtehsafT2220055");
