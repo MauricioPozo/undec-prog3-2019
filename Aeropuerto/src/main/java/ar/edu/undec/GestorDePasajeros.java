@@ -57,10 +57,10 @@ public class GestorDePasajeros {
 		return pasajeros.remove(pasajeroBorrar);
 	}
 
-	public List<Pasajero> traerPasajerosPorApellido(String aplellidoBuscar){
+	public List<Pasajero> traerPasajerosPorApellido(String apellidoBuscar){
 		List<Pasajero> pasajerosPorApellidos = new ArrayList<>();
 		for (Pasajero pasajero : pasajeros) {
-			if(pasajero.getApellido()==aplellidoBuscar) {
+			if(pasajero.getApellido().equals(apellidoBuscar)) {
 				pasajerosPorApellidos.add(pasajero);
 			}
 		}

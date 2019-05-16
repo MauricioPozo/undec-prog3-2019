@@ -44,4 +44,26 @@ public class Piloto {
 	public LocalDate getFechaNacimientoPiloto() {
 		return fechaNacimiento;	
 	}
+
+	public LocalDate getFechaNacimiento() {
+		return fechaNacimiento;
+	}
+
+	public void setFechaNacimiento(LocalDate fechaNacimiento) {
+		this.fechaNacimiento = fechaNacimiento;
+	}
+
+	public void setApellidoPiloto(String apellidoPiloto) {
+		this.apellidoPiloto = apellidoPiloto;
+	}
+
+	public void setNombresPiloto(String nombresPiloto) {
+		this.nombresPiloto = nombresPiloto;
+	}
+
+	public void setDocumentoPiloto(String documentoPiloto) {
+		this.documentoPiloto = documentoPiloto;
+	}
+	
+	
 }

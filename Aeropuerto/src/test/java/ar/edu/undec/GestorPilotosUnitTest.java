@@ -42,4 +42,9 @@ public class GestorPilotosUnitTest {
 		assertTrue(gestor.agregarUnPiloto("Zalazar", "Pedro Nicolas", "12659847", LocalDate.of(1988, 5, 11)));
 		assertFalse(gestor.eliminarPiloto("12595447"));
 	}
+	@Test
+	public void ModificarPiloto() throws ExcepcionCampoIncorrecto{
+		assertTrue(gestor.agregarUnPiloto("Zalazar", "Pedro Nicolas", "12659847", LocalDate.of(1988, 5, 11)));
+		assertTrue(gestor.modificarPilotoPorDocumento("12659847", "Perez", "Pedro Nicolas", "12659847", LocalDate.of(1989, 5, 11)));
+	}
 }

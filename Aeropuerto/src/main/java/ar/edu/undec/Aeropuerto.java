@@ -6,11 +6,23 @@ public class Aeropuerto {
 	private Ciudad ciudadDelAeropuerto;
 	private String codigoAeropuerto;
 
-	public Aeropuerto(Integer id, String nombre, Ciudad ciudad, String codigo) {
-		this.idAeropuerto = id;
-		this.nombreAeropuerto = nombre;
-		this.ciudadDelAeropuerto = ciudad;
-		this.codigoAeropuerto = codigo;
+	public Aeropuerto() {
+		
+	}
+	
+	public Aeropuerto(Integer id, String nombre, Ciudad ciudad, String codigo)throws ExcepcionCampoIncorrecto {
+		if(codigo.isEmpty()) {
+			throw new ExcepcionCampoIncorrecto("El código de un aeropuerto no puede estar vacío");
+		}else {
+			if(nombre.isEmpty()) {
+				throw new ExcepcionCampoIncorrecto("El nombre no debe estar vacía");
+			}else {
+				this.idAeropuerto = id;
+				this.nombreAeropuerto = nombre;
+				this.ciudadDelAeropuerto = ciudad;
+				this.codigoAeropuerto = codigo;
+			}
+		}		
 	}
 
 	public int getIdAeropuerto() {
@@ -27,6 +39,10 @@ public class Aeropuerto {
 
 	public String getCodigoAeropuerto() {
 		return codigoAeropuerto;
+	}
+
+	public void setNombreAeropuerto(String nombreAeropuerto) {
+		this.nombreAeropuerto = nombreAeropuerto;
 	}
 
 }

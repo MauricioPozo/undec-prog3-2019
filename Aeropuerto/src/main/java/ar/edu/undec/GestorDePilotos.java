@@ -26,6 +26,7 @@ public class GestorDePilotos{
 			return false;
 		}
 	}
+	
 	public boolean consultarExistenciaPiloto(String documento) {
 		for (Piloto piloto : pilotos) {
 			if(piloto.getDocumentoPiloto().equals(documento))
@@ -56,4 +57,27 @@ public class GestorDePilotos{
 		return pilotos.remove(pilotoBorrar);
 	}
 
+	public List<Piloto> traerPilotosPorApellido(String apellidoBuscar){
+		List<Piloto> pilotosPorApellidos = new ArrayList<>();
+		for (Piloto piloto : pilotos) {
+			if(piloto.getApellidoPiloto().equals(apellidoBuscar)) {
+				pilotosPorApellidos.add(piloto);
+			}
+		}
+		return pilotosPorApellidos;
+	} 
+	
+	public boolean modificarPilotoPorDocumento(String docBuscar, String apellidoModificar, String nombresModificar,String docModificar, LocalDate fechNacModificar ){
+		int i = 0;
+		for(; i < pilotos.size();i++) {
+			if(pilotos.get(i).getDocumentoPiloto().equals(docBuscar)) {		
+				pilotos.get(i).setDocumentoPiloto(docModificar);
+				pilotos.get(i).setApellidoPiloto(apellidoModificar);
+				pilotos.get(i).setNombresPiloto(nombresModificar);
+				pilotos.get(i).setFechaNacimiento(fechNacModificar);
+				return true;
+			}		
+		}
+		return false;
+	}
 }
